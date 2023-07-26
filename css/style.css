@@ -1,0 +1,130 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/* ===== Base ===== */
+*,::after, ::before{
+    box-sizing: border-box;    
+}
+:root{
+    --body-color:#000;
+    --light-white-color:#fff;
+    --input-color:#C5C3BF;
+    --border-color:#DCDDE1;
+    --btn-bg-hover-color:#E61F23;
+    /* Typography */
+    --body-font:'Josefin Sans', sans-serif;
+    --normal-font-size:1.2rem;
+    --small-font-size:1rem;
+}
+
+body{
+    background: var(--body-color);
+    font: var(--body-font)
+}
+
+
+/* ===== FORM MAIN ===== */
+.login-main{
+    background: url('/assets/img/bg.jpg') no-repeat center /cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+}
+
+.login-form{
+    max-width: 420px;
+    background: var(--light-white-color);
+    padding: 70px 35px;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px var(--input-color);
+}
+
+.login-form::after{
+    content: "";
+    width: 195px;
+    height: 50px;
+    background: url('/assets/img/after.png') no-repeat center /cover;
+    top:0;
+    right:0;
+    position: absolute;
+}
+
+.login-form::before{
+    content: "";
+    width: 195px;
+    height: 50px;
+    background: url('/assets/img/before.png') no-repeat center /cover;
+    bottom:0;
+    left:0;
+    position: absolute;
+}
+
+.login-form .logo-image img{
+    width: 100px;
+}
+
+.login-form .form-title{
+    margin: 1rem 0 2rem 0;
+}
+
+.login-form .form-group{
+    margin-bottom: 20px;
+    height: 55px;
+    position: relative;
+}
+
+.form-group .form-control{   
+    height: 100%;
+    background: none;
+    outline: 0;
+    border: 1px solid var(--border-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form-group .form-control:focus{
+    box-shadow: none;
+    border: 1px solid var(--body-color);
+}
+
+.form-label{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 0.5rem;
+    color: var(--input-color);
+    transition: 0.3s;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown).form-control:not(:focus)+ .form-label{
+    left: 1rem;
+    top: -0.9rem;
+    font-size: var(--small-font-size);
+    color: var(--body-color);
+    z-index: 10;
+    background: var(--light-white-color);
+    
+}
+
+
+.btn-theme{
+    height: 2.5rem;
+    background: var(--body-color);
+    color: var(--light-white-color);
+    outline: 0;
+    border: 0;
+    padding: 0.5rem 0;
+    border-radius: 0.3rem;
+    line-height: 0;
+    transition: 0.3s;
+}
+
+.btn-theme:hover{
+    background: var(--btn-bg-hover-color);
+}
